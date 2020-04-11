@@ -3,6 +3,8 @@ import { initGlobalAPI } from './global-api/index'
 import { isServerRendering } from 'core/util/env'
 import { FunctionalRenderContext } from 'core/vdom/create-functional-component'
 
+console.log('heaven到此一游')
+
 initGlobalAPI(Vue)
 
 Object.defineProperty(Vue.prototype, '$isServer', {
@@ -10,7 +12,7 @@ Object.defineProperty(Vue.prototype, '$isServer', {
 })
 
 Object.defineProperty(Vue.prototype, '$ssrContext', {
-  get () {
+  get() {
     /* istanbul ignore next */
     return this.$vnode && this.$vnode.ssrContext
   }
